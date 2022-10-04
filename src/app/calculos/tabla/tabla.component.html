@@ -1,0 +1,19 @@
+<hr><hr><hr>
+<h1>Tabla de Multiplicar</h1>
+<br><br>
+<div class="row">
+    <div class="col-4">
+    <div class="mb-3 row">
+        <label for="num" class="col-sm-2 col-form-label">Número</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="num" name="num" class="form-control">
+        </div>
+      </div>
+        <div class="mb-3 row">
+          <button (click)="table()" class="btn btn-primary">Generar Tabla</button>
+          </div>
+      </div>
+    <div class="col-6">
+    <h2 [innerHTML]="tabla"></h2>
+    </div>
+</div>

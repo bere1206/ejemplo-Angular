@@ -1,0 +1,72 @@
+
+<body>
+    <img src="https://www.resetmx.reviews/wp-content/uploads/2017/09/75.png">
+    <br><br>
+    <div class="alert alert-primary" role="alert">
+     Cada boleto tiene un costo de $12.<br>
+     Pero puedes obtener descuentos en los siguientes casos:<br>
+    - En la compra de más de 5 boletos tendrás un 15% de descuento sobre el valor a pagar.<br>
+    - En la compra de tres, cuatro o cinco boletos recibe un 10% de descuento sobre el valor a pagar.<br>
+    - En la compra de 2 boletos o menos no se aplicará ningún descuento.<br>
+     <b>Nota:</b> Si la compra se realiza con la tarjeta CINECO, tendrás derecho a un 10% de descuento del valor a pagar, como descuento adicional a los descuentos ya obtenidos.
+    </div>
+    <div class="mb-3 row">
+        <h2>Entradas</h2>
+        <br>
+        <label for="num2" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="nombre" name="nombre" class="form-control">
+        </div>
+
+        <br><br>
+
+        <label for="num2" class="col-sm-2 col-form-label">Cantidad compradores</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="cantComp" name="compradores" class="form-control">
+        </div>
+
+        <br><br>
+        <label>Tarjeta CINECO</label>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="true">
+            <label class="form-check-label" [(ngModel)]="tarjeta" for="flexRadioDefault1">
+              SI
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  >
+            <label class="form-check-label" [(ngModel)]="tarjeta" for="flexRadioDefault2">
+              NO
+            </label>
+          </div>
+
+          <label for="num2" class="col-sm-2 col-form-label">Cantidad de boletos</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="cantBol" name="boletos" class="form-control" id="inputPassword">
+        </div>
+
+    </div>
+    <br><br><br>
+
+    <div class="mb-3 row">
+        <h2>Salidas</h2>
+        <br>
+        <label for="pago" class="col-sm-2 col-form-label">Valor a pagar</label>
+        <div class="col-sm-10">
+          <h3>$ {{total}} </h3>
+          <!--<input type="text" name="num2" class="form-control">-->
+        </div>
+
+        <br><br>
+    </div>
+
+    <div class="mb-3 row">
+        <h2>Acciones</h2>
+        <br>
+        <button (click)="totalPago()" type="button" class="btn btn-warning">Procesar</button>
+        <hr>
+        <button type="button" class="btn btn-warning">Salir</button>
+        <br><br>
+    </div>
+</body>
