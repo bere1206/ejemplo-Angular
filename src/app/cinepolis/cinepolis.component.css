@@ -6,4 +6,9 @@ body{
 img{
     margin-left: 350px;
 }
-
+#total{
+    color: yellow;
+}
+.alert-danger{
+    color: red;
+}

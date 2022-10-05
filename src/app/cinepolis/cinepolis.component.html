@@ -47,15 +47,18 @@
         </div>
 
     </div>
-    <br><br><br>
+    <br><br>
 
     <div class="mb-3 row">
         <h2>Salidas</h2>
+        <h2 class="alert-danger" >
+          {{alert}} 
+        </h2>
         <br>
         <label for="pago" class="col-sm-2 col-form-label">Valor a pagar:</label>
         <div class="col-sm-10">
           {{nombre}}
-          <h3>$ {{total}}</h3>
+          <h3 id="total">$ {{total}}</h3>
         </div>
 
         <br><br>

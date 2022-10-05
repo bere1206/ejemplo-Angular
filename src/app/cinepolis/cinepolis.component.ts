@@ -13,6 +13,7 @@ export class CinepolisComponent implements OnInit {
   cantBol:any='';
   precioBol:any=12;
   total:any='';
+  alert:string="";
 
   constructor() { }
 
@@ -22,16 +23,26 @@ export class CinepolisComponent implements OnInit {
 
     if (this.cantBol>5) {
       this.total=(parseInt(this.cantBol)*parseInt(this.precioBol))*0.85;
+      this.alert=('');
     }else if (this.cantBol>=3 && this.cantBol<=5){
       this.total=(parseInt(this.cantBol)*parseInt(this.precioBol))*0.9;
+      this.alert=('');
     }else if (this.cantBol<=2){
       this.total=parseInt(this.cantBol)*parseInt(this.precioBol);
-    }
+      this.alert=('');
+    } 
     if(this.tarjeta=='si'){
       this.total=parseInt(this.total)*0.9;
+      this.alert=('');
     }
   }
-}
+  else{
+    this.alert=('No puedes comprar más de 7 boletos por persona');
+    this.total=('');
+    this.cantComp=('');
+    this.cantBol=('');
+  }
+  }
 
   ngOnInit(): void {
   }
