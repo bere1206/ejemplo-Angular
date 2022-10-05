@@ -29,14 +29,14 @@
         <label>Tarjeta CINECO</label>
         <br>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="true">
-            <label class="form-check-label" [(ngModel)]="tarjeta" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="si" [(ngModel)]="tarjeta">
+            <label class="form-check-label" for="flexRadioDefault1">
               SI
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  >
-            <label class="form-check-label" [(ngModel)]="tarjeta" for="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="no"  [(ngModel)]="tarjeta">
+            <label class="form-check-label" for="flexRadioDefault2">
               NO
             </label>
           </div>
@@ -52,10 +52,10 @@
     <div class="mb-3 row">
         <h2>Salidas</h2>
         <br>
-        <label for="pago" class="col-sm-2 col-form-label">Valor a pagar</label>
+        <label for="pago" class="col-sm-2 col-form-label">Valor a pagar:</label>
         <div class="col-sm-10">
-          <h3>$ {{total}} </h3>
-          <!--<input type="text" name="num2" class="form-control">-->
+          {{nombre}}
+          <h3>$ {{total}}</h3>
         </div>
 
         <br><br>
